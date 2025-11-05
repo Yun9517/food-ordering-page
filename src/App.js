@@ -18,7 +18,7 @@ const menuItems = [
     name: '紅燒牛肉麵',
     description: '濃郁湯頭搭配軟嫩牛肉與Q彈麵條。',
     price: 180,
-    image: '/images/beefnoodles.jpg',
+    image: `${process.env.PUBLIC_URL}/images/beefnoodles.jpg`,
     category: '主餐',
   },
   {
@@ -26,7 +26,7 @@ const menuItems = [
     name: '紅燒牛肉飯',
     description: '特選牛肉燴飯，份量十足。',
     price: 160,
-    image: '/images/beef_rice.jpg',
+    image: `${process.env.PUBLIC_URL}/images/beef_rice.jpg`,
     category: '主餐',
   },
   {
@@ -34,7 +34,7 @@ const menuItems = [
     name: '麻油雞麵線',
     description: '溫補的麻油與鮮嫩雞肉的經典組合。',
     price: 150,
-    image: '/images/sesame_oil_chicken_noodles.jpg',
+    image: `${process.env.PUBLIC_URL}/images/sesame_oil_chicken_noodles.jpg`,
     category: '主餐',
   },
   // 小菜
@@ -43,7 +43,7 @@ const menuItems = [
     name: '涼拌木耳',
     description: '清爽開胃的家常涼拌菜。',
     price: 40,
-    image: '/images/cold_black_fungus_salad.jpg',
+    image: `${process.env.PUBLIC_URL}/images/cold_black_fungus_salad.jpg`,
     category: '小菜',
   },
   {
@@ -51,7 +51,7 @@ const menuItems = [
     name: '涼拌海帶芽',
     description: '滑順爽口，營養豐富。',
     price: 40,
-    image: '/images/cold_seaweed.jpg',
+    image: `${process.env.PUBLIC_URL}/images/cold_seaweed.jpg`,
     category: '小菜',
   },
   {
@@ -59,7 +59,7 @@ const menuItems = [
     name: '涼拌豬耳朵',
     description: 'Q彈有嚼勁，佐以特製醬料。',
     price: 50,
-    image: '/images/cold_pig_ear_salad.jpg',
+    image: `${process.env.PUBLIC_URL}/images/cold_pig_ear_salad.jpg`,
     category: '小菜',
   },
   // 飲料
@@ -68,7 +68,7 @@ const menuItems = [
     name: '可樂',
     description: '冰涼暢快的經典選擇。',
     price: 30,
-    image: '/images/cola.jpg',
+    image: `${process.env.PUBLIC_URL}/images/cola.jpg`,
     category: '飲料',
   },
   {
@@ -76,7 +76,7 @@ const menuItems = [
     name: '檸檬茶',
     description: '新鮮檸檬的酸甜滋味。',
     price: 35,
-    image: '/images/lemon_tea.jpg',
+    image: `${process.env.PUBLIC_URL}/images/lemon_tea.jpg`,
     category: '飲料',
   },
 ];
