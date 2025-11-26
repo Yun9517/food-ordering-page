@@ -8,6 +8,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
+import { Routes, Route, Link } from 'react-router-dom';
+import AboutPage from './AboutPage';
 import './App.css';
 
 // Mock Data for menu items
@@ -68,7 +70,7 @@ const menuItems = [
     name: '可樂',
     description: '冰涼暢快的經典選擇。',
     price: 30,
-    image: `${process.env.PUBLIC_URL}/images/cola.jpg`,
+    image: `${process.env.PUBLIC_URL}/images/harmony_cola.png`,
     category: '飲料',
   },
   {
@@ -76,44 +78,35 @@ const menuItems = [
     name: '檸檬茶',
     description: '新鮮檸檬的酸甜滋味。',
     price: 35,
-    image: `${process.env.PUBLIC_URL}/images/lemon_tea.jpg`,
+    image: `${process.env.PUBLIC_URL}/images/harmony_lemontea.png`,
     category: '飲料',
   },
 ];
 
-const featuredItems = menuItems.filter(item => [1, 3].includes(item.id));
+const featuredItems = menuItems.filter(item => [1, 2, 3].includes(item.id));
 const categories = ['全部', ...new Set(menuItems.map(item => item.category))];
 
 // Logo Component
 const Logo = () => (
-  <div style={{
-    width: '32px',
-    height: '32px',
-    borderRadius: '50%',
-    backgroundColor: 'white',
-    color: '#343a40',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: 'bold',
-    fontSize: '20px',
-    fontFamily: 'Noto Sans TC, sans-serif'
-  }}>
-    麵
-  </div>
+  <img 
+    src={`${process.env.PUBLIC_URL}/harmony_logo.png`} 
+    alt="Logo" 
+    style={{ width: '32px', height: '32px' }} 
+  />
 );
 
 // Header Component
 const Header = ({ onShowOrderHistory }) => (
   <Navbar bg="dark" variant="dark" expand="lg" className="shadow-sm">
     <div className="container">
-      <Navbar.Brand href="#home" className="d-flex align-items-center">
+      <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
         <Logo />
-        <span className="ms-2">美味快餐店</span>
+        <span className="ms-2">哈蒙妮亞洲靈魂麵</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
+          <Nav.Link as={Link} to="/about">品牌故事</Nav.Link>
           <Nav.Link onClick={onShowOrderHistory}>訂單紀錄</Nav.Link>
         </Nav>
       </Navbar.Collapse>
@@ -467,15 +460,22 @@ function App() {
   return (
     <>
       <Header onShowOrderHistory={handleOrderHistoryShow} />
-      <FeaturedCarousel items={featuredItems} onAddToCart={handleAddToCart} />
       
-      <div className="container mt-4 menu-container">
-        <CategoryNavigation 
-            selectedCategory={selectedCategory} 
-            onSelectCategory={setSelectedCategory} 
-        />
-        <Menu items={filteredMenuItems} onAddToCart={handleAddToCart} />
-      </div>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <FeaturedCarousel items={featuredItems} onAddToCart={handleAddToCart} />
+            <div className="container mt-4 menu-container">
+              <CategoryNavigation 
+                  selectedCategory={selectedCategory} 
+                  onSelectCategory={setSelectedCategory} 
+              />
+              <Menu items={filteredMenuItems} onAddToCart={handleAddToCart} />
+            </div>
+          </>
+        } />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
 
       <FloatingCartButton cartItemCount={cartItemCount} onClick={handleCartShow} />
 

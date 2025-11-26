@@ -1,34 +1,162 @@
 
-.featured-item {
-  height: 400px; /* Adjust height as needed */
-  background-color: #333;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.featured-item img {
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom CSS for Food Ordering Page */
+
+body {
+  background-color: #f8f9fa; /* Light background for the whole page */
+}
+
+/* Navbar adjustments */
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Featured Carousel */
+.carousel-item {
+  height: 400px; /* Fixed height for carousel images */
+  overflow: hidden;
+}
+
+.carousel-item img {
+  object-fit: cover; /* Cover the carousel area */
   height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
+  width: 100%;
 }
 
 .featured-item-caption {
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
 }
 
+.featured-item-caption h3, .featured-item-caption p {
+  color: white;
+}
+
+/* Menu items */
 .card {
-    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.card .card-img-top {
-    height: 180px;
-    object-fit: cover; /* This ensures the image covers the area without distortion */
+.card-img-top {
+  height: 200px; /* Fixed height for menu item images */
+  object-fit: cover;
 }
 
-.menu-container {
-    min-height: 60vh;
+/* Category Navigation */
+.nav-pills .nav-link {
+  color: #007bff;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Offcanvas Cart */
+.offcanvas-header {
+  background-color: #343a40;
+  color: white;
+}
+
+.offcanvas-header .btn-close {
+  filter: invert(1); /* Makes the close button white */
+}
+
+/* Checkout Modal enhancements */
+.modal-title {
+  color: #343a40;
+}
+
+/* Order history accordion */
+.accordion-button {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #007bff;
+  background-color: #e9ecef;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Floating Cart Button */
+.floating-cart-button .badge {
+  font-size: 0.7em;
+  padding: 0.3em 0.6em;
+  height: 1.5em;
+  width: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About Page Section Styling */
+.content-section {
+  padding: 6rem 0;
+  color: white;
+}
+.content-section.bg-dark-1 {
+  background-color: #2c3034;
+}
+.content-section.bg-dark-2 {
+  background-color: #212529; /* Bootstrap's '.bg-dark' color */
+}
+
+.about-text h3 {
+  color: #ffc107; /* Bootstrap 'warning' color */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Hero Logo Section on About Page */
+.hero-logo-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+.hero-logo {
+  max-height: 300px;
+  max-width: 300px;
+  margin-bottom: 1.5rem;
+}
+.hero-logo-section h1 {
+  color: white;
+  font-weight: bold;
 }
