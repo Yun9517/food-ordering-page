@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/food-ordering-page/static/css/main.0c6b970d.css",
-    "main.js": "/food-ordering-page/static/js/main.e7e451f5.js",
+    "main.css": "/food-ordering-page/static/css/main.c41bfa23.css",
+    "main.js": "/food-ordering-page/static/js/main.77bade58.js",
     "static/js/453.6904a88e.chunk.js": "/food-ordering-page/static/js/453.6904a88e.chunk.js",
     "index.html": "/food-ordering-page/index.html",
-    "main.0c6b970d.css.map": "/food-ordering-page/static/css/main.0c6b970d.css.map",
-    "main.e7e451f5.js.map": "/food-ordering-page/static/js/main.e7e451f5.js.map",
+    "main.c41bfa23.css.map": "/food-ordering-page/static/css/main.c41bfa23.css.map",
+    "main.77bade58.js.map": "/food-ordering-page/static/js/main.77bade58.js.map",
     "453.6904a88e.chunk.js.map": "/food-ordering-page/static/js/453.6904a88e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c6b970d.css",
-    "static/js/main.e7e451f5.js"
+    "static/css/main.c41bfa23.css",
+    "static/js/main.77bade58.js"
   ]
 }
