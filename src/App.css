@@ -46,6 +46,16 @@ body {
   width: 100%;
 }
 
+/* For desktop, use a taller carousel and 'contain' the image */
+@media (min-width: 992px) {
+  .carousel-item {
+    height: 300px;
+  }
+  .carousel-item img {
+    object-fit: contain; /* Show the whole image, don't crop */
+  }
+}
+
 .featured-item-caption {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;

@@ -378,6 +378,12 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    if (process.env.REACT_APP_VERSION) {
+      console.log(`Food Ordering Page version: ${process.env.REACT_APP_VERSION}`);
+    }
+  }, []);
+
   const handleCartClose = () => setShowCart(false);
   const handleCartShow = () => setShowCart(true);
 
